@@ -37,7 +37,7 @@ public class QuickSort
     //region3-> 0 to j-1  (smaller equal to) swap(i,j) i++ j++
     while(i<arr.length)
     {
-      if(arr[i]<=pivot){  // smaller area or equal to
+      if(arr[i] <= pivot){  // smaller area or equal to
         swap(arr,i,j)
           i++;
           j++;
@@ -50,12 +50,12 @@ public class QuickSort
   }
     public static void quickSort(int[] arr, int low, int high) {
     //base case
-      if(low>=high){
+      if(low >= high){
         return;
       }
-      int pivot=arr[high];
-      int pivotindex= partition(arr,pivot,low,high);
-      quickSort(arr,low,pivotindex-1);
-      quickSort(arr,pivot+1,high);   
+      int pivot= arr[high];
+      int pivotindex= partition(arr, pivot, low, high);
+      quickSort (arr, low, pivotindex-1);
+      quickSort (arr, pivotindex+1, high);   
   }
 }
